@@ -9,6 +9,6 @@ import java.util.List;
 public class Repository {
 
     public List<Student> getStudent(){
-        return List.of(new Student("Ram",11), new Student("Sita",11));
+        return List.of(new Student("Shyam",11), new Student("geeta",11));
     }
 }
