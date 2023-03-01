@@ -10,7 +10,6 @@ import java.util.List;
 @Component
 public class Services {
     Repository repository;
-
     @Autowired
     public Services(Repository repository) {
         this.repository = repository;

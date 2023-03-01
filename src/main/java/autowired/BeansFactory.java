@@ -54,8 +54,8 @@ public class BeansFactory {
 
     public Object getInstance(Constructor<?> constructor) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         for (Parameter parameter : constructor.getParameters()) {
-            if(parameterizedConstructors.containsKey(parameter.getType())){
-                return constructor.newInstance(getInstance(parameterizedConstructors.get(parameter.getType())));
+            if(constructorWithAutowired.containsKey(parameter.getType())){
+                return constructor.newInstance(getInstance(constructorWithAutowired.get(parameter.getType())));
             }
             else {
                 return constructor.newInstance(parameter.getType().newInstance());
